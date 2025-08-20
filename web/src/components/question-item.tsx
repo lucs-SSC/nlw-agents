@@ -1,10 +1,11 @@
 import { Bot, Loader2, MessageSquare } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { dayjs } from '@/lib/dayjs'
+import { dayjsCustom } from '@/lib/dayjs'
+
 
 interface Question {
   id: string
-  question: string
+  questions: string
   answer?: string | null
   createdAt: string
 }
@@ -30,7 +31,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
             <div className="flex-1">
               <p className="mb-1 font-medium text-foreground">Pergunta</p>
               <p className="whitespace-pre-line text-muted-foreground text-sm leading-relaxed">
-                {question.question}
+                {question.questions}
               </p>
             </div>
           </div>
@@ -62,7 +63,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
 
           <div className="flex justify-end">
             <span className="text-muted-foreground text-xs">
-              {dayjs(question.createdAt).toNow()}
+              {dayjsCustom(question.createdAt).toNow()}
             </span>
           </div>
         </div>

@@ -6,10 +6,11 @@ import {
     CardHeader,
     CardTitle 
 } from "./ui/card"
-import { dayjs } from "@/lib/dayjs"
+import { dayjsCustom } from "@/lib/dayjs"
 import { Badge } from "./ui/badge"
 import { ArrowRight } from "lucide-react"
 import { useRooms } from "@/http/use-room"
+
 
 
 export function RoomList(){
@@ -43,7 +44,7 @@ export function RoomList(){
                             <div className="flex-1 flex flex-col gap-1">
                                 <h3 className="font-medium">{room.name}</h3>
                                 <div className="flex items-center gap-2">
-                                    {dayjs(room.createdAt).toNow()}
+                                    {dayjsCustom(room.createdAt).toNow()}
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Badge variant="secondary" className="text-xs">

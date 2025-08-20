@@ -5,4 +5,4 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 lib.locale('pt-BR')
 lib.extend(relativeTime)
 
-export const dayjs = lib
+export const dayjsCustom = lib
