@@ -15,6 +15,13 @@
       "when": 1753757591683,
       "tag": "0001_puzzling_wild_pack",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1756253658968,
+      "tag": "0002_sweet_blob",
+      "breakpoints": true
     }
   ]
 }
